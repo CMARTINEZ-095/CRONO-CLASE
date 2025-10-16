@@ -17,9 +17,13 @@
     <link rel="stylesheet" href="../src/styles/estilosPanelCarga.css" />
   <link rel="stylesheet" href="../src/styles/nav-active.css" />
   <link rel="stylesheet" href="../src/styles/responsive.css" />
+  <link rel="stylesheet" href="../src/styles/hamburger.css" />
   </head>
   <body>
     <nav class="navCalendar">
+      <button id="hamburgerBtn" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
       <div class="nav-buttons" style="width:100%; justify-content:center; display:flex; gap:2rem;">
         <a href="./calendarStudent.html" class="nav-button">
           <img src="../src/assets/img/calendario.png" alt="Calendario" />
@@ -41,9 +45,12 @@
           <img src="../src/assets/img/lock-fill.svg" alt="Cerrar sesión" />
           Cerrar sesión
         </a>
-      </div>
+    </div>
+    <div id="mobileNav" class="mobile-nav" aria-hidden="true"><div class="mobile-nav-inner"><div class="mobile-links"></div></div></div>
+    <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true"></div>
   </nav>
   <script src="../src/scripts/nav-active.js"></script>
+  <script src="../src/scripts/menuhamburguesa.js"></script>
 
     <h1>Panel de Carga de Actividades</h1>
 

@@ -66,7 +66,7 @@ const fechasSemana = fechasArray.map(itemFecha => itemFecha.textContent);
 
 //se cargan las actividades desde la API
 
-fetch("https://68df2db0898434f41356f070.mockapi.io/tarea")
+fetch("")
     .then((response) => response.json())
 
     .then((data) => {

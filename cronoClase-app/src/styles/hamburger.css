@@ -1,0 +1,47 @@
+/* Hamburger menu styles */
+.hamburger{
+  display:none;
+  background:none;
+  border:0;
+  cursor:pointer;
+  padding:8px;
+}
+.hamburger-box{display:inline-block;width:28px;height:18px;position:relative}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+  display:block;background:#493d9e;height:3px;border-radius:3px;position:absolute;width:100%;transition:transform .25s ease,opacity .2s ease;}
+.hamburger-inner{top:50%;transform:translateY(-50%)}
+.hamburger-inner::before{content:'';top:-8px}
+.hamburger-inner::after{content:'';top:8px}
+.hamburger.open .hamburger-inner{transform:rotate(45deg)}
+.hamburger.open .hamburger-inner::before{transform:rotate(90deg);top:0}
+.hamburger.open .hamburger-inner::after{opacity:0}
+
+/* mobile nav panel */
+.mobile-nav{position:fixed;top:0;right:-100%;width:82%;max-width:360px;height:100vh;background:#fff;box-shadow:-8px 0 24px rgba(0,0,0,.2);transition:right .32s ease;z-index:1200;padding:1.25rem 1rem;overflow:auto}
+.mobile-nav.open{right:0}
+.mobile-nav-inner{display:flex;flex-direction:column;gap:.6rem}
+.mobile-links .nav-button{display:flex;align-items:center;padding:.6rem .75rem;border-radius:8px;border:1px solid #eee;background:transparent;color:#493d9e}
+
+/* overlay */
+.mobile-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:opacity .25s ease;z-index:1100}
+.mobile-overlay.open{opacity:1;visibility:visible}
+
+/* Responsive rules: show hamburger on small screens and hide desktop nav-buttons */
+@media (max-width:780px){
+  .hamburger{display:inline-flex}
+  .nav-buttons{display:none !important}
+  /* center the hamburger button inside the nav bar */
+  .navCalendar { position: relative; }
+  /* put hamburger at the right edge (not on top of nav items) */
+  .navCalendar .hamburger {
+    position: absolute;
+    right: 12px; /* small gap from right */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1300;
+  }
+}
+
+@media (min-width:781px){
+  .mobile-nav, .mobile-overlay{display:none}
+}
