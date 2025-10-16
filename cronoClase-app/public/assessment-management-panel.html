@@ -1,361 +1,351 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel de Carga de Actividades - Profesor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&family=Vibur&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../src/styles/assessment-management-panel-style.css" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Carga de Actividades - Profesor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&family=Vibur&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/styles/assessment-management-panel-style.css" />
   <link rel="stylesheet" href="../src/styles/nav-active.css" />
     <link rel="stylesheet" href="../src/styles/responsive.css" />
-    <link rel="stylesheet" href="../src/styles/hamburger.css" />
   </head>
   <body>
     <nav class="navCalendar">
-      <button id="hamburgerBtn" class="hamburger" aria-controls="mobileNav" aria-expanded="false" aria-label="Abrir menú">
-        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
-      </button>
       <div class="nav-buttons" style="width:100%; justify-content:center; display:flex; gap:2rem;">
         <a href="./calendarStudent.html" class="nav-button"><img src="../src/assets/img/calendario.png" alt="Calendario"/> Calendario</a>
         <a href="./panelCargaActividades.html" class="nav-button"><img src="../src/assets/img/acortar.png" alt="Panel de Carga"/> Panel de Carga</a>
         <a href="./vistaEstudiantes.html" class="nav-button"><img src="../src/assets/img/graduado.png" alt="Vista de Estudiantes"/> Vista de Estudiantes</a>
         <a href="./assessment-tracking-panel.html" class="nav-button"><img src="../src/assets/img/journal-code.svg" alt="Panel Evaluación"/> Panel de Evaluación</a>
         <a href="../../index.html" class="nav-button"><img src="../src/assets/img/lock-fill.svg" alt="Cerrar sesión"/> Cerrar sesión</a>
-    </div>
-    <div id="mobileNav" class="mobile-nav" aria-hidden="true"><div class="mobile-nav-inner"><div class="mobile-links"></div></div></div>
-    <div id="mobileOverlay" class="mobile-overlay" aria-hidden="true"></div>
+      </div>
   </nav>
   <script src="../src/scripts/nav-active.js"></script>
   <script src="../src/scripts/menuhamburguesa.js"></script>
 
-    <h1>Panel de Carga de Actividades</h1>
+  <h1>Panel de Carga de Actividades</h1>
 
-    <div class="momentos-container">
-      <div class="momento-card">
-        <h2>Momento 1</h2>
-        <a href="#modal-momento1" class="btn-cargar">Cargar Actividades</a>
-      </div>
-
-      <div class="momento-card">
-        <h2>Momento 2</h2>
-        <a href="#modal-momento2" class="btn-cargar">Cargar Actividades</a>
-      </div>
-
-      <div class="momento-card">
-        <h2>Momento 3</h2>
-        <a href="#modal-momento3" class="btn-cargar">Cargar Actividades</a>
-      </div>
+  <div class="momentos-container">
+    <div class="momento-card">
+      <h2>Momento 1</h2>
+      <a href="#modal-momento1" class="btn-cargar">Cargar Actividades</a>
     </div>
 
-    <!-- Modal Momento 1 -->
-    <div id="modal-momento1" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Momento 1 - Carga de Actividades</h3>
-          <a href="#" class="close-modal">&times;</a>
-        </div>
-        <div class="actividades">
-          <div class="actividad-form">
-            <h4>Actividad 1</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-          </div>
+    <div class="momento-card">
+      <h2>Momento 2</h2>
+      <a href="#modal-momento2" class="btn-cargar">Cargar Actividades</a>
+    </div>
 
-          <div class="actividad-form">
-            <h4>Actividad 2</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-          </div>
+    <div class="momento-card">
+      <h2>Momento 3</h2>
+      <a href="#modal-momento3" class="btn-cargar">Cargar Actividades</a>
+    </div>
+  </div>
 
-          <div class="actividad-form">
-            <h4>Actividad 3</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button class="btn-guardar">Guardar Actividades</button>
-          </div>
-        </div>
+  <!-- Modal Momento 1 -->
+  <div id="modal-momento1" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Momento 1 - Carga de Actividades</h3>
+        <a href="#" class="close-modal">&times;</a>
       </div>
-    </div>    <!-- Modal Momento 2 -->
-    <div id="modal-momento2" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Momento 2 - Carga de Actividades</h3>
-          <a href="#" class="close-modal">&times;</a>
-        </div>
-        <div class="actividades">
-          <div class="actividad-form">
-            <h4>Actividad 1</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
+      <div class="actividades">
+        <div class="actividad-form">
+          <h4>Actividad 1</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
           </div>
-
-          <div class="actividad-form">
-            <h4>Actividad 2</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
           </div>
-
-          <div class="actividad-form">
-            <h4>Actividad 3</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
           </div>
-
-          <div class="form-actions">
-            <button class="btn-guardar">Guardar Actividades</button>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
           </div>
         </div>
-      </div>
-    </div>    <!-- Modal Momento 3 -->
-    <div id="modal-momento3" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Momento 3 - Carga de Actividades</h3>
-          <a href="#" class="close-modal">&times;</a>
+
+        <div class="actividad-form">
+          <h4>Actividad 2</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
+          </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
         </div>
-        <div class="actividades">
-          <div class="actividad-form">
-            <h4>Actividad 1</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-          </div>
 
-          <div class="actividad-form">
-            <h4>Actividad 2</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
+        <div class="actividad-form">
+          <h4>Actividad 3</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
           </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
 
-          <div class="actividad-form">
-            <h4>Actividad 3</h4>
-            <div class="form-group">
-              <label>Título:</label>
-              <input type="text" class="form-control" placeholder="Nombre de la actividad">
-            </div>
-            <div class="form-group">
-              <label>Tipo:</label>
-              <select class="form-control">
-                <option value="quiz">Quiz</option>
-                <option value="exposicion">Exposición</option>
-                <option value="proyecto">Proyecto</option>
-                <option value="taller">Taller</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Fecha de entrega:</label>
-              <input type="date" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Ponderación (%):</label>
-              <input type="number" class="form-control" min="0" max="100">
-            </div>
-            <div class="form-group">
-              <label>Descripción:</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button class="btn-guardar">Guardar Actividades</button>
-          </div>
+        <div class="form-actions">
+          <button class="btn-guardar">Guardar Actividades</button>
         </div>
       </div>
     </div>
-  </body>
+  </div> <!-- Modal Momento 2 -->
+  <div id="modal-momento2" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Momento 2 - Carga de Actividades</h3>
+        <a href="#" class="close-modal">&times;</a>
+      </div>
+      <div class="actividades">
+        <div class="actividad-form">
+          <h4>Actividad 1</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
+          </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="actividad-form">
+          <h4>Actividad 2</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
+          </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="actividad-form">
+          <h4>Actividad 3</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
+          </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn-guardar">Guardar Actividades</button>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Modal Momento 3 -->
+  <div id="modal-momento3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Momento 3 - Carga de Actividades</h3>
+        <a href="#" class="close-modal">&times;</a>
+      </div>
+      <div class="actividades">
+        <div class="actividad-form">
+          <h4>Actividad 1</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
+          </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="actividad-form">
+          <h4>Actividad 2</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
+          </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="actividad-form">
+          <h4>Actividad 3</h4>
+          <div class="form-group">
+            <label>Título:</label>
+            <input type="text" class="form-control" placeholder="Nombre de la actividad">
+          </div>
+          <div class="form-group">
+            <label>Tipo:</label>
+            <select class="form-control">
+              <option value="quiz">Quiz</option>
+              <option value="exposicion">Exposición</option>
+              <option value="proyecto">Proyecto</option>
+              <option value="taller">Taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fecha de entrega:</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Ponderación (%):</label>
+            <input type="number" class="form-control" min="0" max="100">
+          </div>
+          <div class="form-group">
+            <label>Descripción:</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn-guardar">Guardar Actividades</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

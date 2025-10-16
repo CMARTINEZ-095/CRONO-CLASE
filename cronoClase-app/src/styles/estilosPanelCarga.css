@@ -257,3 +257,39 @@ h1 {
         padding: 15px;
     }
 }
+
+.CRUD_btn{
+
+    border-bottom: 2px solid #B2A5FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+
+}
+
+.profesor-card h3{
+    border: 0px
+
+}
+
+.CRUD_btn input{
+
+    background-color: #F8F4FF;
+    border: none;
+    color: #493d9e;
+}
+
+
+#fechaEditAct{
+    background-color: #F8F4FF;
+    border: none;
+    color: #493d9e;
+}
+
+#porcEditAct{
+
+    background-color: #F8F4FF;
+    border: none;
+    color: #493d9e;
+}
